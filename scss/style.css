@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #E8E8E8 0% 0% no-repeat padding-box;
+}
+
+.container {
+  height: 525px;
+  width: 350px;
+  border-radius: 20px;
+  background-color: #041936;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 20px 40px #00000066;
+          box-shadow: 0px 20px 40px #00000066;
+}
+
+.container .calc {
+  height: 109px;
+  width: 100%;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .calc .count {
+  font-size: 16px;
+  color: #00C4FF;
+}
+
+.container .calc .result {
+  font-size: 56px;
+  color: #ffffff;
+}
+
+.container .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: calc(525px - 109px);
+}
+
+.container .number .line {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+button {
+  background-color: #041936;
+  border: 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.line5 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.line5 .ac {
+  color: #00C4FF;
+}
+
+.line5 .x {
+  color: #00C4FF;
+}
+
+.line5 .equal {
+  margin: 8px;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#00C4FF), to(#6C00FF)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%) 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  height: 64px;
+  width: 100%;
+  text-align: right;
+  padding-right: 30px;
+}
+/*# sourceMappingURL=style.css.map */

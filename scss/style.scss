@@ -1,0 +1,95 @@
+$backgroundColor: #041936;
+$fontColor1: #ffffff;
+$fontColor2: #00C4FF;
+
+@mixin size($h,$w) {
+    height: $h;
+    width: $w;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // border: solid 2px white;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E8E8E8 0% 0% no-repeat padding-box;
+}
+
+
+.container {
+    @include size(525px,350px);
+    border-radius: 20px;
+    background-color: $backgroundColor;
+    overflow: hidden;
+    box-shadow: 0px 20px 40px #00000066;
+
+    .calc {
+        @include size(109px,100%);
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .count {
+            font-size: 16px;
+            color: $fontColor2;
+        }
+        .result {
+            font-size: 56px;
+            color: $fontColor1;
+        }
+    }
+    .number {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(525px - 109px);
+        .line {
+            flex: 1;
+            text-align: center;
+        }
+    }
+}
+
+
+
+//按鈕樣式
+.line {
+    display: flex;
+    overflow: hidden;
+    
+}
+button {
+    background-color: $backgroundColor;
+    border: 0px;
+    flex: 1;
+    font-size: 24px;
+    color: $fontColor1;
+}
+
+.line5 {
+    align-items: center;
+    justify-content: center;
+    .ac {
+        color: $fontColor2;
+    }
+    .x {
+        color: $fontColor2;
+    }
+    .equal {
+        margin: 8px;
+        flex: 1.5;
+        background: transparent linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%) 0% 0% no-repeat padding-box;
+        border-radius: 16px; 
+        @include size(64px,100%);
+        text-align:right;
+        padding-right: 30px;
+    }
+}
