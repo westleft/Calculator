@@ -20,7 +20,7 @@ body {
   background: #E8E8E8 0% 0% no-repeat padding-box;
 }
 
-.container {
+.calculator {
   height: 525px;
   width: 350px;
   border-radius: 20px;
@@ -30,7 +30,7 @@ body {
           box-shadow: 0px 20px 40px #00000066;
 }
 
-.container .calc {
+.calculator .result {
   height: 109px;
   width: 100%;
   padding: 16px;
@@ -46,17 +46,17 @@ body {
           align-items: flex-end;
 }
 
-.container .calc .count {
+.calculator .result .count {
   font-size: 16px;
   color: #00C4FF;
 }
 
-.container .calc .result {
+.calculator .result .display {
   font-size: 56px;
   color: #ffffff;
 }
 
-.container .number {
+.calculator .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +68,7 @@ body {
   height: calc(525px - 109px);
 }
 
-.container .number .line {
+.calculator .number .line {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

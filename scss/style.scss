@@ -24,14 +24,14 @@ body {
 }
 
 
-.container {
+.calculator {
     @include size(525px,350px);
     border-radius: 20px;
     background-color: $backgroundColor;
     overflow: hidden;
     box-shadow: 0px 20px 40px #00000066;
 
-    .calc {
+    .result {
         @include size(109px,100%);
         padding: 16px;
         display: flex;
@@ -41,7 +41,7 @@ body {
             font-size: 16px;
             color: $fontColor2;
         }
-        .result {
+        .display {
             font-size: 56px;
             color: $fontColor1;
         }

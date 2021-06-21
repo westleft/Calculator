@@ -8,40 +8,40 @@
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="calc">
+    <div class="calculator">
+        <div class="result">
             <p class="count">1280*30</p>
-            <p class="result">38200</p>
+            <p class="display">0</p>
         </div>
         <div class="number">
             <div class="line1 line">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>÷</button>
+                <button class=num>7</button>
+                <button class=num>8</button>
+                <button class=num>9</button>
+                <button data-action="divide">÷</button>
             </div>
             <div class="line2 line">
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>×</button>
+                <button class=num>4</button>
+                <button class=num>5</button>
+                <button class=num>6</button>
+                <button data-action="multiply">×</button>
             </div>
             <div class="line3 line">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
+                <button class=num>1</button>
+                <button class=num>2</button>
+                <button class=num>3</button>
+                <button data-action="add">+</button>
             </div>
             <div class="line4 line">
-                <button>0</button>
-                <button>00</button>
-                <button>.</button>
-                <button>-</button>
+                <button class=num>0</button>
+                <button class=num>00</button>
+                <button data-action="decimal">.</button>
+                <button data-action="subtract">-</button>
             </div>
             <div class="line5 line">
-                <button class="ac">AC</button>
-                <button class="x">⌫</button>
-                <button class="equal">=</button>
+                <button class="ac" data-action="clear">AC</button>
+                <button class="delete" data-action="delete">⌫</button>
+                <button class="equal" data-action="calculate">=</button>
             </div>
         </div>
     </div>
