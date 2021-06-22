@@ -46,7 +46,7 @@ body {
           align-items: flex-end;
 }
 
-.calculator .result .count {
+.calculator .result .displayOperator {
   font-size: 16px;
   color: #00C4FF;
 }
