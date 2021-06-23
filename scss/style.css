@@ -24,10 +24,10 @@ body {
   height: 525px;
   width: 350px;
   border-radius: 20px;
-  background-color: #041936;
   overflow: hidden;
   -webkit-box-shadow: 0px 20px 40px #00000066;
           box-shadow: 0px 20px 40px #00000066;
+  background-color: #062145;
 }
 
 .calculator .result {
@@ -44,6 +44,7 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-color: #041936;
 }
 
 .calculator .result .displayOperator {
@@ -52,6 +53,12 @@ body {
 }
 
 .calculator .result .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 56px;
   color: #ffffff;
 }
@@ -83,42 +90,32 @@ body {
 }
 
 button {
+  height: 72px;
+  width: 64px;
   background-color: #041936;
+  margin: 8px;
   border: 0px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   font-size: 24px;
   color: #ffffff;
+  border-radius: 16px;
 }
 
-.line5 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.line5 .ac {
-  color: #00C4FF;
-}
-
-.line5 .x {
+.line5 .ac, .line5 .x {
   color: #00C4FF;
 }
 
 .line5 .equal {
-  margin: 8px;
-  -webkit-box-flex: 1.5;
-      -ms-flex: 1.5;
-          flex: 1.5;
+  height: 64px;
+  width: 100%;
+  -webkit-box-flex: 1.8;
+      -ms-flex: 1.8;
+          flex: 1.8;
   background: transparent -webkit-gradient(linear, left top, right top, from(#00C4FF), to(#6C00FF)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%) 0% 0% no-repeat padding-box;
   border-radius: 16px;
-  height: 64px;
-  width: 100%;
   text-align: right;
   padding-right: 30px;
 }
