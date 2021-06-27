@@ -10,6 +10,11 @@ let displayOperator = document.querySelector('.displayOperator')//顯示用(上�
 num.forEach(function (item) {
     item.addEventListener('click', function (e) {
 
+        if(e.target.textContent === '0' && display.textContent === '0'){
+            console.log('sdsd');
+            return
+        }
+
         if (display.textContent === '0') {
             display.textContent = ''
             display.textContent += e.target.textContent
@@ -22,9 +27,9 @@ num.forEach(function (item) {
         }
 
         //防止數字前面出現00
-        if(e.target.textContent === '00'){
+        if (e.target.textContent === '00') {
             console.log(displayResult);
-            if(display.textContent === '00'){
+            if (display.textContent === '00') {
                 display.textContent = '0'
                 return
             }
@@ -39,18 +44,18 @@ num.forEach(function (item) {
 operator.forEach(function (item) {
     item.addEventListener('click', function (e) {
         //避免運算符號重複
-        let lastNum = displayResult[displayResult.length - 1]; 
+        let lastNum = displayResult[displayResult.length - 1];
         if (lastNum == '+' || lastNum == '-' || lastNum == '×' || lastNum == '÷') {
             let arr = displayResult.split('')
             arr.pop()
             arr.push(e.target.textContent)
-            displayResult = s.join('')
+            displayResult = arr.join('')
             displayOperator.textContent = displayResult
             return
         }
-        
+
         displayResult += e.target.innerText
-        display.textContent = '0'  
+        display.textContent = '0'
         displayOperator.textContent = displayResult
     })
 })
@@ -60,7 +65,7 @@ document.querySelector('.ac').addEventListener('click', () => {
     displayResult = '';
     display.textContent = '0'
     displayOperator.textContent = '0'
-    display.style.fontSize =`56px`
+    display.style.fontSize = `56px`
 })
 
 // ⌫按鈕
@@ -76,7 +81,7 @@ document.querySelector('.equal').addEventListener('click', () => {
     let Result = displayResult.replace('×', '*').replace('÷', '/')
     Result = eval(Result)
 
-    display.textContent = Result
+    display.textContent = separator(Result)
     displayOperator.textContent = displayResult
 })
 
@@ -91,9 +96,17 @@ document.querySelector('.decimal').addEventListener('click', (e) => {
 
 
 // 避免破版
-function checkDisplayLength(){
-    if(display.textContent.length >= 8){
+function checkDisplayLength() {
+    if (display.textContent.length >= 8 && display.textContent.length < 16) {
         display.style.fontSize = `${56 * 0.8}px`
+    } else if (display.textContent.length >= 16) {
+        display.style.fontSize = `${56 * 0.3}px`
     }
 }
 
+
+function separator(numb) {
+    var str = numb.toString().split(".");
+    str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return str.join(".");
+}

@@ -50,7 +50,6 @@ body {
     .number {
         display: flex;
         flex-direction: column;
-
         width: 100%;
         height: calc(525px - 109px);
         .line {
@@ -74,10 +73,13 @@ button {
     font-size: 24px;
     color: $fontColor1;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 .line5 {
-    .ac,.x {
+    align-items: center;
+    justify-content: center;
+    .ac,.x,.delete {
         color: $fontColor2;
     }
     .equal {
