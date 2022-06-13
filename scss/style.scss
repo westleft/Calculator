@@ -36,15 +36,24 @@ body {
         flex-direction: column;
         align-items: flex-end;
         background-color: #041936;
-        .displayOperator {
+        input.formula {
             font-size: 16px;
             color: $fontColor2;
+            text-align: right;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
         }
-        .display {
+        input.display {
+            width: 100%;
             display: flex;
             align-items: center;
             font-size: 56px;
+            text-align: right;
+            box-sizing: border-box;
             color: $fontColor1;
+            background-color: #041936;
+            border: none;
         }
     }
     .number {

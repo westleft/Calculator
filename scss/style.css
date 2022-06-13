@@ -47,12 +47,18 @@ body {
   background-color: #041936;
 }
 
-.calculator .result .displayOperator {
+.calculator .result input.formula {
   font-size: 16px;
   color: #00C4FF;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
 }
 
-.calculator .result .display {
+.calculator .result input.display {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,7 +66,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 56px;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #ffffff;
+  background-color: #041936;
+  border: none;
 }
 
 .calculator .number {
